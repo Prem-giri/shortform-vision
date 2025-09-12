@@ -1,54 +1,44 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-
 const Portfolio = () => {
-  const portfolioItems = [
-    {
-      category: "Short-Form",
-      title: "Instagram Reel Campaign",
-      description: "Viral marketing campaign that gained 2M+ views",
-      thumbnail: "🎯",
-      stats: "2M+ views"
-    },
-    {
-      category: "Documentary", 
-      title: "Corporate Story",
-      description: "Brand documentary showcasing company culture",
-      thumbnail: "🏢",
-      stats: "Featured at film festival"
-    },
-    {
-      category: "Presentation",
-      title: "Product Launch Video",
-      description: "Professional product demonstration and features",
-      thumbnail: "🚀",
-      stats: "95% completion rate"
-    },
-    {
-      category: "Short-Form",
-      title: "Travel Reel Series",
-      description: "Cinematic travel content for tourism brand",
-      thumbnail: "✈️",
-      stats: "500K+ engagement"
-    },
-    {
-      category: "Documentary",
-      title: "Artist Profile",
-      description: "Creative documentary about local artist journey",
-      thumbnail: "🎨",
-      stats: "Award winning"
-    },
-    {
-      category: "Presentation", 
-      title: "Educational Series",
-      description: "Multi-part educational content for online course",
-      thumbnail: "📚",
-      stats: "10K+ students"
-    }
-  ];
-
-  return (
-    <section id="work" className="py-20 px-6 bg-secondary/20">
+  const portfolioItems = [{
+    category: "Short-Form",
+    title: "Instagram Reel Campaign",
+    description: "Viral marketing campaign that gained 2M+ views",
+    thumbnail: "🎯",
+    stats: "2M+ views"
+  }, {
+    category: "Documentary",
+    title: "Corporate Story",
+    description: "Brand documentary showcasing company culture",
+    thumbnail: "🏢",
+    stats: "Featured at film festival"
+  }, {
+    category: "Presentation",
+    title: "Product Launch Video",
+    description: "Professional product demonstration and features",
+    thumbnail: "🚀",
+    stats: "95% completion rate"
+  }, {
+    category: "Short-Form",
+    title: "Travel Reel Series",
+    description: "Cinematic travel content for tourism brand",
+    thumbnail: "✈️",
+    stats: "500K+ engagement"
+  }, {
+    category: "Documentary",
+    title: "Artist Profile",
+    description: "Creative documentary about local artist journey",
+    thumbnail: "🎨",
+    stats: "Award winning"
+  }, {
+    category: "Presentation",
+    title: "Educational Series",
+    description: "Multi-part educational content for online course",
+    thumbnail: "📚",
+    stats: "10K+ students"
+  }];
+  return <section id="work" className="py-20 px-6 bg-secondary/20">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">
@@ -60,8 +50,7 @@ const Portfolio = () => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {portfolioItems.map((item, index) => (
-            <Card key={index} className="group cursor-pointer bg-card border-border hover:shadow-card transition-all duration-300 overflow-hidden hover:border-primary/50">
+          {portfolioItems.map((item, index) => <Card key={index} className="group cursor-pointer bg-card border-border hover:shadow-card transition-all duration-300 overflow-hidden hover:border-primary/50">
               <div className="aspect-video bg-gradient-secondary flex items-center justify-center text-4xl group-hover:scale-105 transition-transform duration-300">
                 {item.thumbnail}
               </div>
@@ -77,22 +66,13 @@ const Portfolio = () => {
                   {item.description}
                 </p>
               </div>
-            </Card>
-          ))}
+            </Card>)}
         </div>
 
         <div className="text-center mt-12">
-          <Button 
-            variant="outline" 
-            size="lg"
-            className="border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
-          >
-            View Full Portfolio
-          </Button>
+          
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Portfolio;
