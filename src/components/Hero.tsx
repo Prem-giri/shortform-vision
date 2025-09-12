@@ -42,6 +42,7 @@ const Hero = () => {
               size="lg" 
               variant="outline" 
               className="border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 text-lg px-8 py-6"
+              onClick={() => window.open('https://wa.me/919310665426?text=Hi%20Prem,%20I%20would%20like%20to%20discuss%20a%20video%20editing%20project', '_blank')}
             >
               Get In Touch
             </Button>
