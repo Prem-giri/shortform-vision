@@ -34,6 +34,7 @@ const Hero = () => {
             <Button 
               size="lg" 
               className="bg-gradient-primary hover:shadow-glow transition-all duration-300 text-lg px-8 py-6"
+              onClick={() => document.getElementById('work')?.scrollIntoView({ behavior: 'smooth' })}
             >
               View My Work
             </Button>
