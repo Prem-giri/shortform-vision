@@ -2,10 +2,8 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-
 const Contact = () => {
-  return (
-    <section className="py-20 px-6 bg-secondary/20">
+  return <section className="py-20 px-6 bg-secondary/20">
       <div className="container mx-auto max-w-4xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">
@@ -36,10 +34,7 @@ const Contact = () => {
               </div>
               <div>
                 <label className="text-sm font-medium mb-2 block">Message</label>
-                <Textarea 
-                  placeholder="Tell me about your project, timeline, and any specific requirements..."
-                  className="bg-background border-border h-32"
-                />
+                <Textarea placeholder="Tell me about your project, timeline, and any specific requirements..." className="bg-background border-border h-32" />
               </div>
               <Button className="w-full bg-gradient-primary hover:shadow-glow transition-all duration-300">
                 Send Message
@@ -57,7 +52,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <div className="font-medium">Email</div>
-                    <div className="text-muted-foreground text-sm">hello@visualsbyprem.com</div>
+                    <div className="text-muted-foreground text-sm">visualsbyprem@gmail.com</div>
                   </div>
                 </div>
                 <div className="flex items-center space-x-3">
@@ -88,15 +83,15 @@ const Contact = () => {
               <div className="space-y-3 text-white/90">
                 <div className="flex justify-between">
                   <span>Short-form content</span>
-                  <span>2-3 days</span>
+                  <span>0-1 days</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Presentation videos</span>
-                  <span>3-5 days</span>
+                  <span>2-3 days</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Documentary editing</span>
-                  <span>1-2 weeks</span>
+                  <span>2-4 weeks</span>
                 </div>
               </div>
               <div className="mt-6 p-4 bg-white/10 rounded-lg">
@@ -108,8 +103,6 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Contact;
