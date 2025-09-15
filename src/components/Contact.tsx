@@ -80,132 +80,132 @@ Time: ${new Date().toLocaleString()}
     }
   };
 
-  return <section id="contact" className="py-20 px-6 bg-secondary/20">
-      <div className="container mx-auto max-w-4xl">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">
+  return <section id="contact" className="py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-secondary/10 to-background">
+      <div className="container mx-auto max-w-6xl">
+        <div className="text-center mb-12 lg:mb-16">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold mb-4 lg:mb-6">
             <span className="bg-gradient-primary bg-clip-text text-transparent">Let&apos;s Create</span> Together
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Ready to bring your vision to life? Get in touch and let&apos;s discuss your next project.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
-          <Card className="p-8 bg-card border-border">
-            <h3 className="text-2xl font-display font-semibold mb-6">Send a Message</h3>
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-4">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
+          <Card className="p-6 lg:p-8 bg-gradient-card border-border/50 shadow-elegant">
+            <h3 className="text-xl lg:text-2xl font-display font-semibold mb-6">Send a Message</h3>
+            <form onSubmit={handleSubmit} className="space-y-4 lg:space-y-6">
+              <div className="grid sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="text-sm font-medium mb-2 block">Name</label>
+                  <label className="text-sm font-medium mb-2 block text-foreground">Name</label>
                   <Input 
                     name="name"
                     value={formData.name}
                     onChange={handleInputChange}
                     placeholder="Your name" 
-                    className="bg-background border-border" 
+                    className="bg-background/50 border-border/50 focus:border-primary transition-colors" 
                     required
                   />
                 </div>
                 <div>
-                  <label className="text-sm font-medium mb-2 block">Email</label>
+                  <label className="text-sm font-medium mb-2 block text-foreground">Email</label>
                   <Input 
                     name="email"
                     type="email" 
                     value={formData.email}
                     onChange={handleInputChange}
                     placeholder="your@email.com" 
-                    className="bg-background border-border" 
+                    className="bg-background/50 border-border/50 focus:border-primary transition-colors" 
                     required
                   />
                 </div>
               </div>
               <div>
-                <label className="text-sm font-medium mb-2 block">Project Type</label>
+                <label className="text-sm font-medium mb-2 block text-foreground">Project Type</label>
                 <Input 
                   name="projectType"
                   value={formData.projectType}
                   onChange={handleInputChange}
                   placeholder="e.g., Short-form content, Documentary, Presentation" 
-                  className="bg-background border-border" 
+                  className="bg-background/50 border-border/50 focus:border-primary transition-colors" 
                 />
               </div>
               <div>
-                <label className="text-sm font-medium mb-2 block">Message</label>
+                <label className="text-sm font-medium mb-2 block text-foreground">Message</label>
                 <Textarea 
                   name="message"
                   value={formData.message}
                   onChange={handleInputChange}
                   placeholder="Tell me about your project, timeline, and any specific requirements..." 
-                  className="bg-background border-border h-32" 
+                  className="bg-background/50 border-border/50 focus:border-primary transition-colors h-32 resize-none" 
                   required
                 />
               </div>
               <Button 
                 type="submit" 
                 disabled={isSubmitting}
-                className="w-full bg-gradient-primary hover:shadow-glow transition-all duration-300"
+                className="w-full bg-gradient-primary hover:shadow-glow transition-all duration-300 py-6 text-base font-semibold"
               >
                 {isSubmitting ? "Sending..." : "Send Message"}
               </Button>
             </form>
           </Card>
 
-          <div className="space-y-8">
-            <Card className="p-8 bg-card border-border">
-              <h3 className="text-xl font-display font-semibold mb-4">Quick Connect</h3>
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center">
-                    <span className="text-primary">📧</span>
+          <div className="space-y-6 lg:space-y-8">
+            <Card className="p-6 lg:p-8 bg-gradient-card border-border/50 shadow-elegant">
+              <h3 className="text-lg lg:text-xl font-display font-semibold mb-4 lg:mb-6">Quick Connect</h3>
+              <div className="space-y-4 lg:space-y-5">
+                <div className="flex items-center space-x-3 lg:space-x-4 p-3 rounded-lg bg-background/30 hover:bg-background/50 transition-colors">
+                  <div className="w-10 h-10 lg:w-12 lg:h-12 bg-primary/20 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-primary text-lg lg:text-xl">📧</span>
                   </div>
                   <div>
-                    <div className="font-medium">Email</div>
-                    <div className="text-muted-foreground text-sm">visualsbyprem@gmail.com</div>
+                    <div className="font-medium text-sm lg:text-base">Email</div>
+                    <div className="text-muted-foreground text-xs lg:text-sm">visualsbyprem@gmail.com</div>
                   </div>
                 </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center">
-                    <span className="text-primary">📱</span>
+                <div className="flex items-center space-x-3 lg:space-x-4 p-3 rounded-lg bg-background/30 hover:bg-background/50 transition-colors">
+                  <div className="w-10 h-10 lg:w-12 lg:h-12 bg-primary/20 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-primary text-lg lg:text-xl">📱</span>
                   </div>
                   <div>
-                    <div className="font-medium">Instagram</div>
-                    <div className="text-muted-foreground text-sm">@visualsbyprem</div>
+                    <div className="font-medium text-sm lg:text-base">Instagram</div>
+                    <div className="text-muted-foreground text-xs lg:text-sm">@visualsbyprem</div>
                   </div>
                 </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center">
-                    <span className="text-primary">💼</span>
+                <div className="flex items-center space-x-3 lg:space-x-4 p-3 rounded-lg bg-background/30 hover:bg-background/50 transition-colors">
+                  <div className="w-10 h-10 lg:w-12 lg:h-12 bg-primary/20 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-primary text-lg lg:text-xl">💼</span>
                   </div>
                   <div>
-                    <div className="font-medium">LinkedIn</div>
-                    <div className="text-muted-foreground text-sm">visualsbyprem</div>
+                    <div className="font-medium text-sm lg:text-base">LinkedIn</div>
+                    <div className="text-muted-foreground text-xs lg:text-sm">visualsbyprem</div>
                   </div>
                 </div>
               </div>
             </Card>
 
-            <Card className="p-8 bg-gradient-secondary border-0">
-              <h3 className="text-xl font-display font-semibold mb-4 text-white">
+            <Card className="p-6 lg:p-8 bg-gradient-secondary border-0 shadow-elegant">
+              <h3 className="text-lg lg:text-xl font-display font-semibold mb-4 lg:mb-6 text-white">
                 Project Timeline
               </h3>
-              <div className="space-y-3 text-white/90">
-                <div className="flex justify-between">
-                  <span>Short-form content</span>
-                  <span>0-1 days</span>
+              <div className="space-y-3 lg:space-y-4 text-white/90">
+                <div className="flex justify-between items-center p-2 rounded bg-white/5">
+                  <span className="text-sm lg:text-base">Short-form content</span>
+                  <span className="text-sm lg:text-base font-medium">0-1 days</span>
                 </div>
-                <div className="flex justify-between">
-                  <span>Presentation videos</span>
-                  <span>2-3 days</span>
+                <div className="flex justify-between items-center p-2 rounded bg-white/5">
+                  <span className="text-sm lg:text-base">Presentation videos</span>
+                  <span className="text-sm lg:text-base font-medium">2-3 days</span>
                 </div>
-                <div className="flex justify-between">
-                  <span>Documentary editing</span>
-                  <span>2-4 weeks</span>
+                <div className="flex justify-between items-center p-2 rounded bg-white/5">
+                  <span className="text-sm lg:text-base">Documentary editing</span>
+                  <span className="text-sm lg:text-base font-medium">2-4 weeks</span>
                 </div>
               </div>
-              <div className="mt-6 p-4 bg-white/10 rounded-lg">
-                <div className="text-sm text-white/80">
-                  Rush projects available with 24-48 hour turnaround
+              <div className="mt-6 p-4 bg-white/10 rounded-lg backdrop-blur-sm">
+                <div className="text-xs lg:text-sm text-white/80 text-center">
+                  🚀 Rush projects available with 24-48 hour turnaround
                 </div>
               </div>
             </Card>
