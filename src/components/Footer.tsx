@@ -5,7 +5,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center gap-6 md:gap-0">
           <div className="text-center md:text-left">
             <div className="font-display font-bold text-xl lg:text-2xl bg-gradient-primary bg-clip-text text-transparent">
-              visualsbyprem
+              Apex Edits
             </div>
             <p className="text-muted-foreground text-sm lg:text-base mt-1">
               Creating visual stories that captivate and inspire
@@ -30,7 +30,7 @@ const Footer = () => {
         
         <div className="mt-8 lg:mt-12 pt-6 lg:pt-8 border-t border-border/50 text-center">
           <p className="text-muted-foreground text-xs lg:text-sm">
-            © 2024 VisualsByPrem. All rights reserved. | Crafted with passion for visual storytelling.
+            © 2024 Apex Edits. All rights reserved. | Crafted with passion for visual storytelling.
           </p>
         </div>
       </div>

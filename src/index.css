@@ -17,36 +17,36 @@ All colors MUST be HSL.
     --popover: 0 0% 6%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 265 100% 65%;
+    --primary: 195 85% 55%;
     --primary-foreground: 0 0% 98%;
-    --primary-glow: 265 80% 75%;
+    --primary-glow: 195 85% 70%;
 
-    --secondary: 240 8% 18%;
+    --secondary: 200 20% 15%;
     --secondary-foreground: 0 0% 95%;
 
-    --muted: 240 8% 15%;
-    --muted-foreground: 240 5% 70%;
+    --muted: 200 15% 12%;
+    --muted-foreground: 200 20% 65%;
 
-    --accent: 310 100% 60%;
+    --accent: 180 65% 65%;
     --accent-foreground: 0 0% 98%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 240 8% 20%;
-    --input: 240 8% 15%;
-    --ring: 265 100% 65%;
+    --border: 200 15% 18%;
+    --input: 200 15% 15%;
+    --ring: 195 85% 55%;
 
     --radius: 0.75rem;
 
-    /* Enhanced professional design tokens */
-    --gradient-primary: linear-gradient(135deg, hsl(265 100% 65%) 0%, hsl(310 100% 60%) 100%);
-    --gradient-secondary: linear-gradient(135deg, hsl(240 100% 12%) 0%, hsl(265 60% 25%) 100%);
-    --gradient-dark: linear-gradient(135deg, hsl(0 0% 3%) 0%, hsl(240 15% 8%) 100%);
-    --gradient-card: linear-gradient(135deg, hsl(0 0% 6%) 0%, hsl(240 8% 10%) 100%);
-    --shadow-glow: 0 0 60px hsl(265 100% 65% / 0.4);
+    /* Cool, gentle, trustworthy design tokens */
+    --gradient-primary: linear-gradient(135deg, hsl(195 85% 55%) 0%, hsl(180 65% 65%) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(200 25% 12%) 0%, hsl(195 40% 20%) 100%);
+    --gradient-dark: linear-gradient(135deg, hsl(0 0% 3%) 0%, hsl(200 15% 8%) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(0 0% 6%) 0%, hsl(200 15% 10%) 100%);
+    --shadow-glow: 0 0 60px hsl(195 85% 55% / 0.3);
     --shadow-card: 0 20px 60px -15px hsl(0 0% 0% / 0.8);
-    --shadow-elegant: 0 10px 40px -10px hsl(265 100% 65% / 0.2);
+    --shadow-elegant: 0 10px 40px -10px hsl(195 85% 55% / 0.2);
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 

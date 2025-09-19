@@ -6,7 +6,7 @@ const Header = () => {
       <div className="container mx-auto px-4 lg:px-6 py-3 lg:py-4">
         <div className="flex items-center justify-between">
           <div className="font-display font-bold text-xl lg:text-2xl bg-gradient-primary bg-clip-text text-transparent">
-            visualsbyprem
+            Apex Edits
           </div>
           
           <nav className="hidden md:flex items-center space-x-6 lg:space-x-8">
