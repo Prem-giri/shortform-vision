@@ -166,11 +166,11 @@ Time: ${new Date().toLocaleString()}
                 </div>
                 <div className="flex items-center space-x-3 lg:space-x-4 p-3 rounded-lg bg-background/30 hover:bg-background/50 transition-colors">
                   <div className="w-10 h-10 lg:w-12 lg:h-12 bg-primary/20 rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-primary text-lg lg:text-xl">📱</span>
+                    <span className="text-primary text-lg lg:text-xl">💬</span>
                   </div>
                   <div>
-                    <div className="font-medium text-sm lg:text-base">Instagram</div>
-                    <div className="text-muted-foreground text-xs lg:text-sm">@visualsbyprem</div>
+                    <div className="font-medium text-sm lg:text-base">WhatsApp</div>
+                    <div className="text-muted-foreground text-xs lg:text-sm">+91 9310665426</div>
                   </div>
                 </div>
                 <div className="flex items-center space-x-3 lg:space-x-4 p-3 rounded-lg bg-background/30 hover:bg-background/50 transition-colors">
