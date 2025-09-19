@@ -19,22 +19,22 @@ const About = () => {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="order-2 lg:order-1">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold mb-4 lg:mb-6">
-              <span className="bg-gradient-primary bg-clip-text text-transparent">About</span> Prem
+              <span className="bg-gradient-primary bg-clip-text text-transparent">About</span> Apex
             </h2>
             <div className="space-y-4 lg:space-y-6 text-base lg:text-lg text-muted-foreground leading-relaxed">
               <p>
-                Passionate video editor with a keen eye for storytelling and visual aesthetics. 
-                I specialize in creating engaging content that resonates with audiences across 
-                all platforms and drives real results.
+                Apex Edits is a premier video editing firm specializing in creating captivating visual content 
+                that drives engagement and delivers measurable results. Our team of skilled editors combines 
+                technical expertise with creative storytelling to transform your vision into reality.
               </p>
               <p>
-                From viral social media content to compelling documentaries, I bring technical 
-                expertise and creative vision to every project. My goal is to transform raw 
-                footage into powerful narratives that captivate and inspire action.
+                From viral social media campaigns to professional corporate videos, we handle projects of all 
+                scales with precision and creativity. Our cutting-edge techniques and deep understanding of 
+                digital platforms ensure your content stands out in today&apos;s competitive landscape.
               </p>
               <p>
-                I stay current with the latest trends and techniques in video editing, ensuring 
-                your content stands out in today&apos;s competitive digital landscape.
+                At Apex Edits, we don&apos;t just edit videos – we craft experiences that resonate with your 
+                audience and amplify your brand&apos;s message across all digital channels.
               </p>
             </div>
 
@@ -73,23 +73,23 @@ const About = () => {
             </Card>
 
             <Card className="p-6 lg:p-8 bg-gradient-card border-border/50 shadow-elegant">
-              <h3 className="text-lg lg:text-xl font-display font-semibold mb-4 lg:mb-6">Why Choose Me?</h3>
+              <h3 className="text-lg lg:text-xl font-display font-semibold mb-4 lg:mb-6">Why Choose Apex Edits?</h3>
               <ul className="space-y-3 lg:space-y-4">
                 <li className="flex items-start">
                   <div className="w-2 h-2 bg-primary rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                  <span className="text-muted-foreground text-sm lg:text-base">Quick turnaround times without compromising quality</span>
+                  <span className="text-muted-foreground text-sm lg:text-base">Professional team delivering quality within tight deadlines</span>
                 </li>
                 <li className="flex items-start">
                   <div className="w-2 h-2 bg-primary rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                  <span className="text-muted-foreground text-sm lg:text-base">Deep understanding of platform-specific requirements</span>
+                  <span className="text-muted-foreground text-sm lg:text-base">Expertise across all major platforms and formats</span>
                 </li>
                 <li className="flex items-start">
                   <div className="w-2 h-2 bg-primary rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                  <span className="text-muted-foreground text-sm lg:text-base">Collaborative approach with unlimited revisions</span>
+                  <span className="text-muted-foreground text-sm lg:text-base">Comprehensive creative process with client collaboration</span>
                 </li>
                 <li className="flex items-start">
                   <div className="w-2 h-2 bg-primary rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                  <span className="text-muted-foreground text-sm lg:text-base">Results-driven editing focused on engagement</span>
+                  <span className="text-muted-foreground text-sm lg:text-base">Data-driven editing strategies for maximum impact</span>
                 </li>
               </ul>
             </Card>

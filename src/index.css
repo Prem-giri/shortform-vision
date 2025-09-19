@@ -17,17 +17,17 @@ All colors MUST be HSL.
     --popover: 0 0% 6%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 195 85% 55%;
+    --primary: 210 100% 60%;
     --primary-foreground: 0 0% 98%;
-    --primary-glow: 195 85% 70%;
+    --primary-glow: 210 100% 75%;
 
-    --secondary: 200 20% 15%;
+    --secondary: 200 25% 15%;
     --secondary-foreground: 0 0% 95%;
 
     --muted: 200 15% 12%;
     --muted-foreground: 200 20% 65%;
 
-    --accent: 180 65% 65%;
+    --accent: 160 80% 55%;
     --accent-foreground: 0 0% 98%;
 
     --destructive: 0 84% 60%;
@@ -35,18 +35,18 @@ All colors MUST be HSL.
 
     --border: 200 15% 18%;
     --input: 200 15% 15%;
-    --ring: 195 85% 55%;
+    --ring: 210 100% 60%;
 
     --radius: 0.75rem;
 
-    /* Cool, gentle, trustworthy design tokens */
-    --gradient-primary: linear-gradient(135deg, hsl(195 85% 55%) 0%, hsl(180 65% 65%) 100%);
-    --gradient-secondary: linear-gradient(135deg, hsl(200 25% 12%) 0%, hsl(195 40% 20%) 100%);
-    --gradient-dark: linear-gradient(135deg, hsl(0 0% 3%) 0%, hsl(200 15% 8%) 100%);
-    --gradient-card: linear-gradient(135deg, hsl(0 0% 6%) 0%, hsl(200 15% 10%) 100%);
-    --shadow-glow: 0 0 60px hsl(195 85% 55% / 0.3);
+    /* Vibrant, professional design tokens */
+    --gradient-primary: linear-gradient(135deg, hsl(210 100% 60%) 0%, hsl(160 80% 55%) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(200 25% 12%) 0%, hsl(210 60% 25%) 100%);
+    --gradient-dark: linear-gradient(135deg, hsl(0 0% 3%) 0%, hsl(210 20% 8%) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(0 0% 6%) 0%, hsl(210 15% 10%) 100%);
+    --shadow-glow: 0 0 60px hsl(210 100% 60% / 0.4);
     --shadow-card: 0 20px 60px -15px hsl(0 0% 0% / 0.8);
-    --shadow-elegant: 0 10px 40px -10px hsl(195 85% 55% / 0.2);
+    --shadow-elegant: 0 10px 40px -10px hsl(210 100% 60% / 0.3);
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
