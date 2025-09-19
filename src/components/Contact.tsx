@@ -5,7 +5,9 @@ import { Textarea } from "@/components/ui/textarea";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 const Contact = () => {
-  const { toast } = useToast();
+  const {
+    toast
+  } = useToast();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -13,28 +15,26 @@ const Contact = () => {
     message: ""
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
+    const {
+      name,
+      value
+    } = e.target;
     setFormData(prev => ({
       ...prev,
       [name]: value
     }));
   };
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
     if (!formData.name || !formData.email || !formData.message) {
       toast({
         title: "Please fill in all required fields",
-        variant: "destructive",
+        variant: "destructive"
       });
       return;
     }
-
     setIsSubmitting(true);
-
     try {
       // Create WhatsApp message with form data
       const whatsappMessage = `
@@ -58,7 +58,7 @@ Time: ${new Date().toLocaleString()}
       // Show success message
       toast({
         title: "Message sent!",
-        description: "You'll be redirected to WhatsApp to complete sending the message.",
+        description: "You'll be redirected to WhatsApp to complete sending the message."
       });
 
       // Reset form
@@ -68,18 +68,16 @@ Time: ${new Date().toLocaleString()}
         projectType: "",
         message: ""
       });
-
     } catch (error) {
       toast({
         title: "Error",
         description: "Something went wrong. Please try again.",
-        variant: "destructive",
+        variant: "destructive"
       });
     } finally {
       setIsSubmitting(false);
     }
   };
-
   return <section id="contact" className="py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-secondary/10 to-background">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-12 lg:mb-16">
@@ -98,54 +96,22 @@ Time: ${new Date().toLocaleString()}
               <div className="grid sm:grid-cols-2 gap-4">
                 <div>
                   <label className="text-sm font-medium mb-2 block text-foreground">Name</label>
-                  <Input 
-                    name="name"
-                    value={formData.name}
-                    onChange={handleInputChange}
-                    placeholder="Your name" 
-                    className="bg-background/50 border-border/50 focus:border-primary transition-colors" 
-                    required
-                  />
+                  <Input name="name" value={formData.name} onChange={handleInputChange} placeholder="Your name" className="bg-background/50 border-border/50 focus:border-primary transition-colors" required />
                 </div>
                 <div>
                   <label className="text-sm font-medium mb-2 block text-foreground">Email</label>
-                  <Input 
-                    name="email"
-                    type="email" 
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    placeholder="your@email.com" 
-                    className="bg-background/50 border-border/50 focus:border-primary transition-colors" 
-                    required
-                  />
+                  <Input name="email" type="email" value={formData.email} onChange={handleInputChange} placeholder="your@email.com" className="bg-background/50 border-border/50 focus:border-primary transition-colors" required />
                 </div>
               </div>
               <div>
                 <label className="text-sm font-medium mb-2 block text-foreground">Project Type</label>
-                <Input 
-                  name="projectType"
-                  value={formData.projectType}
-                  onChange={handleInputChange}
-                  placeholder="e.g., Short-form content, Documentary, Presentation" 
-                  className="bg-background/50 border-border/50 focus:border-primary transition-colors" 
-                />
+                <Input name="projectType" value={formData.projectType} onChange={handleInputChange} placeholder="e.g., Short-form content, Documentary, Presentation" className="bg-background/50 border-border/50 focus:border-primary transition-colors" />
               </div>
               <div>
                 <label className="text-sm font-medium mb-2 block text-foreground">Message</label>
-                <Textarea 
-                  name="message"
-                  value={formData.message}
-                  onChange={handleInputChange}
-                  placeholder="Tell me about your project, timeline, and any specific requirements..." 
-                  className="bg-background/50 border-border/50 focus:border-primary transition-colors h-32 resize-none" 
-                  required
-                />
+                <Textarea name="message" value={formData.message} onChange={handleInputChange} placeholder="Tell me about your project, timeline, and any specific requirements..." className="bg-background/50 border-border/50 focus:border-primary transition-colors h-32 resize-none" required />
               </div>
-              <Button 
-                type="submit" 
-                disabled={isSubmitting}
-                className="w-full bg-gradient-primary hover:shadow-glow transition-all duration-300 py-6 text-base font-semibold"
-              >
+              <Button type="submit" disabled={isSubmitting} className="w-full bg-gradient-primary hover:shadow-glow transition-all duration-300 py-6 text-base font-semibold">
                 {isSubmitting ? "Sending..." : "Send Message"}
               </Button>
             </form>
@@ -173,15 +139,7 @@ Time: ${new Date().toLocaleString()}
                     <div className="text-muted-foreground text-xs lg:text-sm">+91 9310665426</div>
                   </div>
                 </div>
-                <div className="flex items-center space-x-3 lg:space-x-4 p-3 rounded-lg bg-background/30 hover:bg-background/50 transition-colors">
-                  <div className="w-10 h-10 lg:w-12 lg:h-12 bg-primary/20 rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-primary text-lg lg:text-xl">💼</span>
-                  </div>
-                  <div>
-                    <div className="font-medium text-sm lg:text-base">LinkedIn</div>
-                    <div className="text-muted-foreground text-xs lg:text-sm">visualsbyprem</div>
-                  </div>
-                </div>
+                
               </div>
             </Card>
 
