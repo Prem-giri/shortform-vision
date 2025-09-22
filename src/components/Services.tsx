@@ -1,25 +1,31 @@
 import { Card } from "@/components/ui/card";
-import { Play, Film, Presentation } from "lucide-react";
+import { Smartphone, Clapperboard, Monitor, Star, Award, Shield } from "lucide-react";
 
 const Services = () => {
   const services = [
     {
       title: "Short-Form Content",
       description: "Instagram Reels, YouTube Shorts, TikTok videos that grab attention and drive engagement.",
-      icon: Play,
-      features: ["Quick cuts & transitions", "Trending audio sync", "Mobile-optimized formats", "High engagement rates"]
+      icon: Smartphone,
+      badge: "2M+ Views Generated",
+      features: ["Quick cuts & transitions", "Trending audio sync", "Mobile-optimized formats", "High engagement rates"],
+      trustIndicator: { icon: Star, text: "98% Client Satisfaction" }
     },
     {
       title: "Documentary Editing", 
       description: "Compelling narrative storytelling through professional documentary post-production.",
-      icon: Film,
-      features: ["Narrative structure", "Interview editing", "B-roll integration", "Color grading"]
+      icon: Clapperboard,
+      badge: "Award-Winning Quality",
+      features: ["Narrative structure", "Interview editing", "B-roll integration", "Color grading"],
+      trustIndicator: { icon: Award, text: "Film Festival Featured" }
     },
     {
       title: "Presentation Videos",
       description: "Professional presentations and corporate videos that communicate your message clearly.",
-      icon: Presentation, 
-      features: ["Motion graphics", "Screen recordings", "Voiceover sync", "Brand consistency"]
+      icon: Monitor,
+      badge: "Corporate Trusted",
+      features: ["Motion graphics", "Screen recordings", "Voiceover sync", "Brand consistency"],
+      trustIndicator: { icon: Shield, text: "100% Professional" }
     }
   ];
 
@@ -55,10 +61,21 @@ const Services = () => {
                 {/* Card Background Gradient */}
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                 
-                {/* Icon Container */}
+                {/* Trust Badge */}
+                <div className="absolute top-4 right-4 bg-primary/10 text-primary text-xs font-semibold px-3 py-1 rounded-full border border-primary/20">
+                  {service.badge}
+                </div>
+                
+                {/* Icon Container with Creative Design */}
                 <div className="relative z-10 mb-6">
-                  <div className="w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center group-hover:scale-110 transition-all duration-500 shadow-lg">
-                    <IconComponent className="w-8 h-8 text-white" />
+                  <div className="relative">
+                    <div className="w-20 h-20 bg-gradient-primary rounded-3xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-glow">
+                      <IconComponent className="w-10 h-10 text-white" />
+                    </div>
+                    {/* Decorative Ring */}
+                    <div className="absolute -inset-2 border-2 border-primary/20 rounded-3xl group-hover:border-primary/40 transition-colors duration-500"></div>
+                    {/* Pulse Effect */}
+                    <div className="absolute -inset-1 bg-primary/10 rounded-3xl opacity-0 group-hover:opacity-100 group-hover:animate-pulse transition-opacity duration-500"></div>
                   </div>
                 </div>
                 
@@ -66,9 +83,15 @@ const Services = () => {
                   <h3 className="text-2xl lg:text-3xl font-display font-bold mb-4 lg:mb-5 group-hover:text-primary transition-colors duration-300">
                     {service.title}
                   </h3>
-                  <p className="text-muted-foreground mb-8 leading-relaxed text-base lg:text-lg font-light">
+                  <p className="text-muted-foreground mb-6 leading-relaxed text-base lg:text-lg font-light">
                     {service.description}
                   </p>
+                  
+                  {/* Trust Indicator */}
+                  <div className="flex items-center mb-6 text-sm font-medium text-primary bg-primary/5 px-4 py-2 rounded-lg">
+                    <service.trustIndicator.icon className="w-4 h-4 mr-2" />
+                    {service.trustIndicator.text}
+                  </div>
                   
                   {/* Features List */}
                   <div className="space-y-4">
@@ -101,7 +124,7 @@ const Services = () => {
           </p>
           <a href="#contact" className="inline-flex items-center px-8 py-4 bg-gradient-primary text-white font-semibold rounded-full hover:shadow-glow transition-all duration-300 hover:scale-105">
             Get Started Today
-            <Play className="w-5 h-5 ml-2" />
+            <Smartphone className="w-5 h-5 ml-2" />
           </a>
         </div>
       </div>
