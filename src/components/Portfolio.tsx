@@ -3,6 +3,14 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { Play } from "lucide-react";
 import { useState } from "react";
+
+// Import portfolio images
+import instagramReelImage from "@/assets/portfolio-instagram-reel.jpg";
+import corporateStoryImage from "@/assets/portfolio-corporate-story.jpg";
+import productLaunchImage from "@/assets/portfolio-product-launch.jpg";
+import travelReelImage from "@/assets/portfolio-travel-reel.jpg";
+import artistProfileImage from "@/assets/portfolio-artist-profile.jpg";
+import educationalSeriesImage from "@/assets/portfolio-educational-series.jpg";
 const Portfolio = () => {
   const [selectedVideo, setSelectedVideo] = useState<string>("");
   const [selectedItem, setSelectedItem] = useState<any>(null);
@@ -11,7 +19,7 @@ const Portfolio = () => {
     category: "Short-Form",
     title: "Instagram Reel Campaign",
     description: "Viral marketing campaign that gained 2M+ views",
-    thumbnail: "🎯",
+    thumbnail: instagramReelImage,
     stats: "2M+ views",
     videos: [
       { title: "Main Campaign Video", url: "https://www.w3schools.com/html/mov_bbb.mp4" },
@@ -21,7 +29,7 @@ const Portfolio = () => {
     category: "Documentary",
     title: "Corporate Story",
     description: "Brand documentary showcasing company culture",
-    thumbnail: "🏢",
+    thumbnail: corporateStoryImage,
     stats: "Featured at film festival",
     videos: [
       { title: "Full Documentary", url: "https://www.w3schools.com/html/mov_bbb.mp4" },
@@ -31,7 +39,7 @@ const Portfolio = () => {
     category: "Presentation",
     title: "Product Launch Video",
     description: "Professional product demonstration and features",
-    thumbnail: "🚀",
+    thumbnail: productLaunchImage,
     stats: "95% completion rate",
     videos: [
       { title: "Product Demo", url: "https://www.w3schools.com/html/mov_bbb.mp4" }
@@ -40,7 +48,7 @@ const Portfolio = () => {
     category: "Short-Form",
     title: "Travel Reel Series",
     description: "Cinematic travel content for tourism brand",
-    thumbnail: "✈️",
+    thumbnail: travelReelImage,
     stats: "500K+ engagement",
     videos: [
       { title: "Episode 1", url: "https://www.w3schools.com/html/mov_bbb.mp4" },
@@ -51,7 +59,7 @@ const Portfolio = () => {
     category: "Documentary",
     title: "Artist Profile",
     description: "Creative documentary about local artist journey",
-    thumbnail: "🎨",
+    thumbnail: artistProfileImage,
     stats: "Award winning",
     videos: [
       { title: "Artist Documentary", url: "https://www.w3schools.com/html/mov_bbb.mp4" }
@@ -60,7 +68,7 @@ const Portfolio = () => {
     category: "Presentation",
     title: "Educational Series",
     description: "Multi-part educational content for online course",
-    thumbnail: "📚",
+    thumbnail: educationalSeriesImage,
     stats: "10K+ students",
     videos: [
       { title: "Course Introduction", url: "https://www.w3schools.com/html/mov_bbb.mp4" },
@@ -89,8 +97,12 @@ const Portfolio = () => {
             <Sheet key={index}>
               <SheetTrigger asChild>
                 <Card className="group cursor-pointer bg-card border-border hover:shadow-card transition-all duration-300 overflow-hidden hover:border-primary/50" onClick={() => handleVideoSelect(item)}>
-                  <div className="aspect-video bg-gradient-secondary flex items-center justify-center text-4xl group-hover:scale-105 transition-transform duration-300 relative">
-                    {item.thumbnail}
+                  <div className="aspect-video bg-gradient-secondary group-hover:scale-105 transition-transform duration-300 relative overflow-hidden">
+                    <img 
+                      src={item.thumbnail} 
+                      alt={item.title}
+                      className="w-full h-full object-cover"
+                    />
                     <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                       <Play className="w-12 h-12 text-white" />
                     </div>
