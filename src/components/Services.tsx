@@ -1,36 +1,38 @@
 import { Card } from "@/components/ui/card";
 import { Smartphone, Clapperboard, Monitor, Star, Award, Shield } from "lucide-react";
-
 const Services = () => {
-  const services = [
-    {
-      title: "Short-Form Content",
-      description: "Instagram Reels, YouTube Shorts, TikTok videos that grab attention and drive engagement.",
-      icon: Smartphone,
-      badge: "2M+ Views Generated",
-      features: ["Quick cuts & transitions", "Trending audio sync", "Mobile-optimized formats", "High engagement rates"],
-      trustIndicator: { icon: Star, text: "98% Client Satisfaction" }
-    },
-    {
-      title: "Documentary Editing", 
-      description: "Compelling narrative storytelling through professional documentary post-production.",
-      icon: Clapperboard,
-      badge: "Award-Winning Quality",
-      features: ["Narrative structure", "Interview editing", "B-roll integration", "Color grading"],
-      trustIndicator: { icon: Award, text: "Film Festival Featured" }
-    },
-    {
-      title: "Presentation Videos",
-      description: "Professional presentations and corporate videos that communicate your message clearly.",
-      icon: Monitor,
-      badge: "Corporate Trusted",
-      features: ["Motion graphics", "Screen recordings", "Voiceover sync", "Brand consistency"],
-      trustIndicator: { icon: Shield, text: "100% Professional" }
+  const services = [{
+    title: "Short-Form Content",
+    description: "Instagram Reels, YouTube Shorts, TikTok videos that grab attention and drive engagement.",
+    icon: Smartphone,
+    badge: "2M+ Views Generated",
+    features: ["Quick cuts & transitions", "Trending audio sync", "Mobile-optimized formats", "High engagement rates"],
+    trustIndicator: {
+      icon: Star,
+      text: "98% Client Satisfaction"
     }
-  ];
-
-  return (
-    <section id="services" className="py-20 lg:py-28 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-background via-secondary/10 to-background relative overflow-hidden">
+  }, {
+    title: "Documentary Editing",
+    description: "Compelling narrative storytelling through professional documentary post-production.",
+    icon: Clapperboard,
+    badge: "Award-Winning Quality",
+    features: ["Narrative structure", "Interview editing", "B-roll integration", "Color grading"],
+    trustIndicator: {
+      icon: Award,
+      text: "Film Festival Featured"
+    }
+  }, {
+    title: "Presentation Videos",
+    description: "Professional presentations and corporate videos that communicate your message clearly.",
+    icon: Monitor,
+    badge: "Corporate Trusted",
+    features: ["Motion graphics", "Screen recordings", "Voiceover sync", "Brand consistency"],
+    trustIndicator: {
+      icon: Shield,
+      text: "100% Professional"
+    }
+  }];
+  return <section id="services" className="py-20 lg:py-28 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-background via-secondary/10 to-background relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
       <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
@@ -55,9 +57,8 @@ const Services = () => {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
           {services.map((service, index) => {
-            const IconComponent = service.icon;
-            return (
-              <Card key={index} className="group relative p-8 lg:p-10 bg-card/50 backdrop-blur-sm border-border/50 hover:shadow-elegant transition-all duration-700 hover:border-primary/40 hover:-translate-y-2 animate-fade-in overflow-hidden">
+          const IconComponent = service.icon;
+          return <Card key={index} className="group relative p-8 lg:p-10 bg-card/50 backdrop-blur-sm border-border/50 hover:shadow-elegant transition-all duration-700 hover:border-primary/40 hover:-translate-y-2 animate-fade-in overflow-hidden">
                 {/* Card Background Gradient */}
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                 
@@ -99,37 +100,25 @@ const Services = () => {
                       Key Features
                     </h4>
                     <ul className="space-y-3">
-                      {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-base lg:text-lg group-hover:translate-x-1 transition-transform duration-300" 
-                            style={{ transitionDelay: `${featureIndex * 50}ms` }}>
+                      {service.features.map((feature, featureIndex) => <li key={featureIndex} className="flex items-center text-base lg:text-lg group-hover:translate-x-1 transition-transform duration-300" style={{
+                    transitionDelay: `${featureIndex * 50}ms`
+                  }}>
                           <div className="w-2 h-2 bg-gradient-primary rounded-full mr-4 flex-shrink-0 group-hover:scale-150 transition-transform duration-300"></div>
                           <span className="text-foreground/90 font-medium">{feature}</span>
-                        </li>
-                      ))}
+                        </li>)}
                     </ul>
                   </div>
                 </div>
                 
                 {/* Hover Effect Line */}
                 <div className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-primary group-hover:w-full transition-all duration-700"></div>
-              </Card>
-            );
-          })}
+              </Card>;
+        })}
         </div>
         
         {/* Call to Action */}
-        <div className="text-center mt-16 lg:mt-20">
-          <p className="text-lg text-muted-foreground mb-6">
-            Ready to elevate your content?
-          </p>
-          <a href="#contact" className="inline-flex items-center px-8 py-4 bg-gradient-primary text-white font-semibold rounded-full hover:shadow-glow transition-all duration-300 hover:scale-105">
-            Get Started Today
-            <Smartphone className="w-5 h-5 ml-2" />
-          </a>
-        </div>
+        
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Services;
