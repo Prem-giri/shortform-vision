@@ -32,86 +32,83 @@ const Services = () => {
       text: "100% Professional"
     }
   }];
-  return <section id="services" className="py-20 lg:py-28 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-background via-secondary/10 to-background relative overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
-      <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
+  return <section id="services" className="section-padding bg-gradient-to-b from-background to-muted/30 relative overflow-hidden">
+      {/* Subtle Background Elements */}
+      <div className="absolute top-20 right-20 w-72 h-72 bg-primary/5 rounded-full blur-3xl animate-float"></div>
+      <div className="absolute bottom-20 left-20 w-80 h-80 bg-accent/5 rounded-full blur-3xl animate-float" style={{animationDelay: '1s'}}></div>
       
       <div className="container mx-auto max-w-7xl relative z-10">
-        <div className="text-center mb-16 lg:mb-20">
-          <div className="inline-block mb-4">
-            <span className="text-sm font-medium text-primary bg-primary/10 px-4 py-2 rounded-full">
+        <div className="text-center mb-20 lg:mb-24">
+          <div className="inline-block mb-6">
+            <span className="text-sm font-medium text-primary bg-primary/10 px-6 py-3 rounded-full border border-primary/20">
               Professional Services
             </span>
           </div>
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold mb-6 lg:mb-8">
-            <span className="bg-gradient-primary bg-clip-text text-transparent">Expert Video</span>
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-8 tracking-tight">
+            <span className="text-gradient">Expert Video</span>
             <br />
-            <span className="text-foreground">Editing Services</span>
+            <span className="text-foreground font-light">Editing Solutions</span>
           </h2>
           <p className="text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed font-light">
-            Transform your raw footage into compelling stories with our specialized editing expertise
+            Elevate your content with professional editing that tells your story beautifully
           </p>
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
           {services.map((service, index) => {
           const IconComponent = service.icon;
-          return <Card key={index} className="group relative p-8 lg:p-10 bg-card/50 backdrop-blur-sm border-border/50 hover:shadow-elegant transition-all duration-700 hover:border-primary/40 hover:-translate-y-2 animate-fade-in overflow-hidden">
-                {/* Card Background Gradient */}
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+          return <Card key={index} className="group relative p-8 lg:p-10 bg-card/60 backdrop-blur-sm border-border/30 hover:shadow-elegant hover:shadow-primary/5 transition-all duration-500 hover:border-primary/30 hover-lift animate-fade-in overflow-hidden">
+                {/* Subtle Card Enhancement */}
+                <div className="absolute inset-0 bg-gradient-elegant opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 
                 {/* Trust Badge */}
-                <div className="absolute top-4 right-4 bg-primary/10 text-primary text-xs font-semibold px-3 py-1 rounded-full border border-primary/20">
+                <div className="absolute top-6 right-6 bg-primary/10 text-primary text-xs font-medium px-4 py-2 rounded-full border border-primary/20 backdrop-blur-sm">
                   {service.badge}
                 </div>
                 
-                {/* Icon Container with Creative Design */}
-                <div className="relative z-10 mb-6">
+                {/* Icon Container */}
+                <div className="relative z-10 mb-8">
                   <div className="relative">
-                    <div className="w-20 h-20 bg-gradient-primary rounded-3xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-glow">
-                      <IconComponent className="w-10 h-10 text-white" />
+                    <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center group-hover:scale-105 transition-all duration-300 shadow-soft">
+                      <IconComponent className="w-8 h-8 text-white" />
                     </div>
-                    {/* Decorative Ring */}
-                    <div className="absolute -inset-2 border-2 border-primary/20 rounded-3xl group-hover:border-primary/40 transition-colors duration-500"></div>
-                    {/* Pulse Effect */}
-                    <div className="absolute -inset-1 bg-primary/10 rounded-3xl opacity-0 group-hover:opacity-100 group-hover:animate-pulse transition-opacity duration-500"></div>
+                    {/* Subtle Ring */}
+                    <div className="absolute -inset-1 border border-primary/20 rounded-2xl group-hover:border-primary/30 transition-colors duration-300"></div>
                   </div>
                 </div>
                 
                 <div className="relative z-10">
-                  <h3 className="text-2xl lg:text-3xl font-display font-bold mb-4 lg:mb-5 group-hover:text-primary transition-colors duration-300">
+                  <h3 className="text-2xl lg:text-3xl font-bold mb-5 group-hover:text-primary transition-colors duration-300 tracking-tight">
                     {service.title}
                   </h3>
-                  <p className="text-muted-foreground mb-6 leading-relaxed text-base lg:text-lg font-light">
+                  <p className="text-muted-foreground mb-6 leading-relaxed text-lg font-light">
                     {service.description}
                   </p>
                   
                   {/* Trust Indicator */}
-                  <div className="flex items-center mb-6 text-sm font-medium text-primary bg-primary/5 px-4 py-2 rounded-lg">
+                  <div className="flex items-center mb-6 text-sm font-medium text-primary bg-primary/8 px-4 py-3 rounded-xl border border-primary/15">
                     <service.trustIndicator.icon className="w-4 h-4 mr-2" />
                     {service.trustIndicator.text}
                   </div>
                   
                   {/* Features List */}
                   <div className="space-y-4">
-                    <h4 className="text-sm font-semibold text-foreground/80 uppercase tracking-wider">
-                      Key Features
+                    <h4 className="text-sm font-medium text-foreground/70 uppercase tracking-wide">
+                      Specializations
                     </h4>
                     <ul className="space-y-3">
-                      {service.features.map((feature, featureIndex) => <li key={featureIndex} className="flex items-center text-base lg:text-lg group-hover:translate-x-1 transition-transform duration-300" style={{
+                      {service.features.map((feature, featureIndex) => <li key={featureIndex} className="flex items-center text-base group-hover:translate-x-1 transition-transform duration-300" style={{
                     transitionDelay: `${featureIndex * 50}ms`
                   }}>
-                          <div className="w-2 h-2 bg-gradient-primary rounded-full mr-4 flex-shrink-0 group-hover:scale-150 transition-transform duration-300"></div>
-                          <span className="text-foreground/90 font-medium">{feature}</span>
+                          <div className="w-1.5 h-1.5 bg-primary rounded-full mr-4 flex-shrink-0 group-hover:scale-125 transition-transform duration-300"></div>
+                          <span className="text-foreground/85 font-light">{feature}</span>
                         </li>)}
                     </ul>
                   </div>
                 </div>
                 
-                {/* Hover Effect Line */}
-                <div className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-primary group-hover:w-full transition-all duration-700"></div>
+                {/* Subtle Bottom Border */}
+                <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-500"></div>
               </Card>;
         })}
         </div>

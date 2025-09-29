@@ -78,20 +78,21 @@ Time: ${new Date().toLocaleString()}
       setIsSubmitting(false);
     }
   };
-  return <section id="contact" className="py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-secondary/10 to-background">
-      <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-12 lg:mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold mb-4 lg:mb-6">
-            <span className="bg-gradient-primary bg-clip-text text-transparent">Let&apos;s Create</span> Together
+  return <section id="contact" className="section-padding bg-gradient-to-b from-background to-muted/20 relative overflow-hidden">
+      <div className="absolute top-20 left-20 w-72 h-72 bg-primary/5 rounded-full blur-3xl animate-float"></div>
+      <div className="container mx-auto max-w-6xl relative z-10">
+        <div className="text-center mb-16 lg:mb-20">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 tracking-tight">
+            <span className="text-gradient">Let&apos;s Create</span> <span className="font-light">Together</span>
           </h2>
-          <p className="text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Ready to bring your vision to life? Get in touch and let&apos;s discuss your next project.
+          <p className="text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed font-light">
+            Ready to transform your vision into compelling visual stories?
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
-          <Card className="p-6 lg:p-8 bg-gradient-card border-border/50 shadow-elegant">
-            <h3 className="text-xl lg:text-2xl font-display font-semibold mb-6">Send a Message</h3>
+          <Card className="p-8 bg-card/60 border-border/30 shadow-elegant backdrop-blur-sm hover-lift transition-all duration-300">
+            <h3 className="text-2xl font-bold mb-8">Send a Message</h3>
             <form onSubmit={handleSubmit} className="space-y-4 lg:space-y-6">
               <div className="grid sm:grid-cols-2 gap-4">
                 <div>
@@ -118,8 +119,8 @@ Time: ${new Date().toLocaleString()}
           </Card>
 
           <div className="space-y-6 lg:space-y-8">
-            <Card className="p-6 lg:p-8 bg-gradient-card border-border/50 shadow-elegant">
-              <h3 className="text-lg lg:text-xl font-display font-semibold mb-4 lg:mb-6">Quick Connect</h3>
+            <Card className="p-8 bg-card/60 border-border/30 shadow-elegant backdrop-blur-sm hover-lift transition-all duration-300">
+              <h3 className="text-xl font-bold mb-6">Quick Connect</h3>
               <div className="space-y-4 lg:space-y-5">
                 <div className="flex items-center space-x-3 lg:space-x-4 p-3 rounded-lg bg-background/30 hover:bg-background/50 transition-colors">
                   <div className="w-10 h-10 lg:w-12 lg:h-12 bg-primary/20 rounded-full flex items-center justify-center flex-shrink-0">
@@ -143,27 +144,27 @@ Time: ${new Date().toLocaleString()}
               </div>
             </Card>
 
-            <Card className="p-6 lg:p-8 bg-gradient-secondary border-0 shadow-elegant">
-              <h3 className="text-lg lg:text-xl font-display font-semibold mb-4 lg:mb-6 text-white">
+            <Card className="p-8 bg-gradient-card border-border/30 shadow-elegant hover-lift transition-all duration-300">
+              <h3 className="text-xl font-bold mb-6">
                 Project Timeline
               </h3>
-              <div className="space-y-3 lg:space-y-4 text-white/90">
-                <div className="flex justify-between items-center p-2 rounded bg-white/5">
-                  <span className="text-sm lg:text-base">Short-form content</span>
-                  <span className="text-sm lg:text-base font-medium">0-1 days</span>
+              <div className="space-y-4">
+                <div className="flex justify-between items-center p-4 rounded-lg bg-muted/30 border border-border/20">
+                  <span className="text-base">Short-form content</span>
+                  <span className="text-base font-medium text-primary">24-48 hours</span>
                 </div>
-                <div className="flex justify-between items-center p-2 rounded bg-white/5">
-                  <span className="text-sm lg:text-base">Presentation videos</span>
-                  <span className="text-sm lg:text-base font-medium">2-3 days</span>
+                <div className="flex justify-between items-center p-4 rounded-lg bg-muted/30 border border-border/20">
+                  <span className="text-base">Presentation videos</span>
+                  <span className="text-base font-medium text-primary">2-3 days</span>
                 </div>
-                <div className="flex justify-between items-center p-2 rounded bg-white/5">
-                  <span className="text-sm lg:text-base">Documentary editing</span>
-                  <span className="text-sm lg:text-base font-medium">2-4 weeks</span>
+                <div className="flex justify-between items-center p-4 rounded-lg bg-muted/30 border border-border/20">
+                  <span className="text-base">Documentary editing</span>
+                  <span className="text-base font-medium text-primary">2-4 weeks</span>
                 </div>
               </div>
-              <div className="mt-6 p-4 bg-white/10 rounded-lg backdrop-blur-sm">
-                <div className="text-xs lg:text-sm text-white/80 text-center">
-                  🚀 Rush projects available with 24-48 hour turnaround
+              <div className="mt-6 p-4 bg-primary/10 rounded-lg border border-primary/20">
+                <div className="text-sm text-primary text-center font-medium">
+                  🚀 Priority service available for urgent projects
                 </div>
               </div>
             </Card>

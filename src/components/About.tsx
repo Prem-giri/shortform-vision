@@ -14,12 +14,13 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
-      <div className="container mx-auto max-w-7xl">
+    <section id="about" className="section-padding bg-gradient-to-b from-muted/30 to-background relative">
+      <div className="absolute top-32 right-32 w-64 h-64 bg-accent/5 rounded-full blur-3xl animate-float"></div>
+      <div className="container mx-auto max-w-7xl relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="order-2 lg:order-1">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold mb-4 lg:mb-6">
-              <span className="bg-gradient-primary bg-clip-text text-transparent">About</span> Apex
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 tracking-tight">
+              <span className="text-gradient">About</span> <span className="font-light">Apex</span>
             </h2>
             <div className="space-y-4 lg:space-y-6 text-base lg:text-lg text-muted-foreground leading-relaxed">
               <p>
@@ -54,17 +55,17 @@ const About = () => {
           </div>
 
           <div className="space-y-6 order-1 lg:order-2">
-            <Card className="p-6 lg:p-8 bg-gradient-secondary border-0 shadow-elegant">
-              <h3 className="text-xl lg:text-2xl font-display font-bold text-center mb-6 lg:mb-8 text-white">
+            <Card className="p-8 bg-gradient-card border-border/30 shadow-elegant hover-lift transition-all duration-300">
+              <h3 className="text-2xl font-bold text-center mb-8 text-foreground">
                 Proven Results
               </h3>
               <div className="grid grid-cols-2 gap-4 lg:gap-6">
                 {stats.map((stat, index) => (
                   <div key={index} className="text-center">
-                    <div className="text-2xl lg:text-3xl font-display font-bold text-white mb-1">
+                    <div className="text-3xl font-bold text-primary mb-2">
                       {stat.number}
                     </div>
-                    <div className="text-xs lg:text-sm text-white/80 leading-tight">
+                    <div className="text-sm text-muted-foreground font-light">
                       {stat.label}
                     </div>
                   </div>
