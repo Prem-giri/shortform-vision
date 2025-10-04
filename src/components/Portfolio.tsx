@@ -7,9 +7,9 @@ import { useState } from "react";
 // Import portfolio images
 import instagramReelImage from "@/assets/portfolio-instagram-reel.jpg";
 import corporateStoryImage from "@/assets/portfolio-corporate-story.jpg";
-import productLaunchImage from "@/assets/portfolio-product-launch.jpg";
+import leadGenerationImage from "@/assets/portfolio-lead-generation.jpg";
 import travelReelImage from "@/assets/portfolio-travel-reel.jpg";
-import artistProfileImage from "@/assets/portfolio-artist-profile.jpg";
+import documentaryEditsImage from "@/assets/portfolio-documentary-edits.jpg";
 import educationalSeriesImage from "@/assets/portfolio-educational-series.jpg";
 const Portfolio = () => {
   const [selectedVideo, setSelectedVideo] = useState<string>("");
@@ -37,12 +37,12 @@ const Portfolio = () => {
     ]
   }, {
     category: "Presentation",
-    title: "Product Launch Video",
-    description: "Professional product demonstration and features",
-    thumbnail: productLaunchImage,
-    stats: "95% completion rate",
+    title: "Lead Generation Video",
+    description: "High-converting video content for sales funnels",
+    thumbnail: leadGenerationImage,
+    stats: "45% conversion rate",
     videos: [
-      { title: "Product Demo", url: "https://www.w3schools.com/html/mov_bbb.mp4" }
+      { title: "Sales Funnel Video", url: "https://www.w3schools.com/html/mov_bbb.mp4" }
     ]
   }, {
     category: "Short-Form",
@@ -57,12 +57,12 @@ const Portfolio = () => {
     ]
   }, {
     category: "Documentary",
-    title: "Artist Profile",
-    description: "Creative documentary about local artist journey",
-    thumbnail: artistProfileImage,
+    title: "Documentary Edits",
+    description: "Professional documentary editing and storytelling",
+    thumbnail: documentaryEditsImage,
     stats: "Award winning",
     videos: [
-      { title: "Artist Documentary", url: "https://www.w3schools.com/html/mov_bbb.mp4" }
+      { title: "Documentary Showcase", url: "https://www.w3schools.com/html/mov_bbb.mp4" }
     ]
   }, {
     category: "Presentation",
