@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { Play } from "lucide-react";
 import { useState } from "react";
+import Section3DBackground from "./Section3DBackground";
 
 // Import portfolio images
 import instagramReelImage from "@/assets/portfolio-instagram-reel.jpg";
@@ -81,8 +82,11 @@ const Portfolio = () => {
     setSelectedItem(item);
     setSelectedVideo(item.videos[0].url);
   };
-  return <section id="work" className="py-20 px-6 bg-secondary/20">
-      <div className="container mx-auto max-w-6xl">
+  return <section id="work" className="py-20 px-6 bg-secondary/20 relative overflow-hidden">
+      {/* 3D Background */}
+      <Section3DBackground />
+      
+      <div className="container mx-auto max-w-6xl relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">
             <span className="bg-gradient-primary bg-clip-text text-transparent">Featured Work</span>

@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Smartphone, Clapperboard, Monitor, Star, Award, Shield } from "lucide-react";
+import Section3DBackground from "./Section3DBackground";
 const Services = () => {
   const services = [{
     title: "Short-Form Content",
@@ -33,6 +34,9 @@ const Services = () => {
     }
   }];
   return <section id="services" className="section-padding bg-gradient-to-b from-background to-muted/30 relative overflow-hidden">
+      {/* 3D Background */}
+      <Section3DBackground />
+      
       {/* Subtle Background Elements */}
       <div className="absolute top-20 right-20 w-72 h-72 bg-primary/5 rounded-full blur-3xl animate-float"></div>
       <div className="absolute bottom-20 left-20 w-80 h-80 bg-accent/5 rounded-full blur-3xl animate-float" style={{animationDelay: '1s'}}></div>

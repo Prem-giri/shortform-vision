@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import Section3DBackground from "./Section3DBackground";
 const Contact = () => {
   const {
     toast
@@ -79,6 +80,9 @@ Time: ${new Date().toLocaleString()}
     }
   };
   return <section id="contact" className="section-padding bg-gradient-to-b from-background to-muted/20 relative overflow-hidden">
+      {/* 3D Background */}
+      <Section3DBackground />
+      
       <div className="absolute top-20 left-20 w-72 h-72 bg-primary/5 rounded-full blur-3xl animate-float"></div>
       <div className="container mx-auto max-w-6xl relative z-10">
         <div className="text-center mb-16 lg:mb-20">

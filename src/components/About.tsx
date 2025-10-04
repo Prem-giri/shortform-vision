@@ -1,4 +1,5 @@
 import { Card } from "@/components/ui/card";
+import Section3DBackground from "./Section3DBackground";
 
 const About = () => {
   const stats = [
@@ -14,7 +15,10 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="section-padding bg-gradient-to-b from-muted/30 to-background relative">
+    <section id="about" className="section-padding bg-gradient-to-b from-muted/30 to-background relative overflow-hidden">
+      {/* 3D Background */}
+      <Section3DBackground />
+      
       <div className="absolute top-32 right-32 w-64 h-64 bg-accent/5 rounded-full blur-3xl animate-float"></div>
       <div className="container mx-auto max-w-7xl relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
