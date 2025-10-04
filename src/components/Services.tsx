@@ -67,13 +67,9 @@ const Services = () => {
                 </div>
                 
                 {/* Icon Container */}
-                <div className="relative z-10 mb-8">
-                  <div className="relative">
-                    <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center group-hover:scale-105 transition-all duration-300 shadow-soft">
-                      <IconComponent className="w-8 h-8 text-white" />
-                    </div>
-                    {/* Subtle Ring */}
-                    <div className="absolute -inset-1 border border-primary/20 rounded-2xl group-hover:border-primary/30 transition-colors duration-300"></div>
+                <div className="relative z-10 mb-6">
+                  <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center border border-primary/20 group-hover:bg-primary/15 transition-all duration-300">
+                    <IconComponent className="w-7 h-7 text-primary" />
                   </div>
                 </div>
                 
