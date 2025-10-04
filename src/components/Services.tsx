@@ -68,8 +68,8 @@ const Services = () => {
                 
                 {/* Icon Container */}
                 <div className="relative z-10 mb-6">
-                  <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center border border-primary/20 group-hover:bg-primary/15 transition-all duration-300">
-                    <IconComponent className="w-7 h-7 text-primary" />
+                  <div className="w-16 h-16 rounded-2xl flex items-center justify-center bg-gradient-to-br from-primary to-primary/80 group-hover:shadow-lg group-hover:shadow-primary/30 transition-all duration-300 group-hover:scale-105">
+                    <IconComponent className="w-8 h-8 text-white" />
                   </div>
                 </div>
                 
