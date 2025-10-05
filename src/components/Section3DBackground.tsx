@@ -10,6 +10,9 @@ function FloatingElement({ position, type }: { position: [number, number, number
     if (meshRef.current) {
       meshRef.current.rotation.y += 0.005;
       meshRef.current.rotation.x = Math.sin(state.clock.elapsedTime * 0.5) * 0.1;
+      meshRef.current.position.y = position[1] + Math.sin(state.clock.elapsedTime * 0.8 + position[0]) * 0.3;
+      const scale = 1 + Math.sin(state.clock.elapsedTime * 1.2 + position[0]) * 0.15;
+      meshRef.current.scale.set(scale, scale, scale);
     }
   });
 
