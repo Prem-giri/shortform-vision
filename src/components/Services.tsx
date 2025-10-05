@@ -41,27 +41,27 @@ const Services = () => {
       <div className="absolute top-20 right-20 w-72 h-72 bg-primary/5 rounded-full blur-3xl animate-float"></div>
       <div className="absolute bottom-20 left-20 w-80 h-80 bg-accent/5 rounded-full blur-3xl animate-float" style={{animationDelay: '1s'}}></div>
       
-      <div className="container mx-auto max-w-7xl relative z-10">
-        <div className="text-center mb-20 lg:mb-24">
-          <div className="inline-block mb-6">
-            <span className="text-sm font-medium text-primary bg-primary/10 px-6 py-3 rounded-full border border-primary/20">
+      <div className="container mx-auto max-w-7xl relative z-10 px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12 sm:mb-16 lg:mb-20">
+          <div className="inline-block mb-4 sm:mb-6">
+            <span className="text-xs sm:text-sm font-medium text-primary bg-primary/10 px-4 sm:px-6 py-2 sm:py-3 rounded-full border border-primary/20">
               Professional Services
             </span>
           </div>
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-8 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 lg:mb-8 tracking-tight px-4">
             <span className="text-gradient">Expert Video</span>
             <br />
             <span className="text-foreground font-light">Editing Solutions</span>
           </h2>
-          <p className="text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed font-light">
+          <p className="text-base sm:text-lg lg:text-xl xl:text-2xl text-muted-foreground max-w-3xl lg:max-w-4xl mx-auto leading-relaxed font-light px-4">
             Elevate your content with professional editing that tells your story beautifully
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10">
           {services.map((service, index) => {
           const IconComponent = service.icon;
-          return <Card key={index} className="group relative p-8 lg:p-10 bg-card/60 backdrop-blur-sm border-border/30 hover:shadow-elegant hover:shadow-primary/5 transition-all duration-500 hover:border-primary/30 hover-lift animate-fade-in overflow-hidden">
+          return <Card key={index} className="group relative p-6 sm:p-8 lg:p-10 bg-card/60 backdrop-blur-sm border-border/30 hover:shadow-elegant hover:shadow-primary/5 transition-all duration-500 hover:border-primary/30 hover-lift animate-fade-in overflow-hidden">
                 {/* Subtle Card Enhancement */}
                 <div className="absolute inset-0 bg-gradient-elegant opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 

@@ -86,17 +86,17 @@ const Portfolio = () => {
       {/* 3D Background */}
       <Section3DBackground />
       
-      <div className="container mx-auto max-w-6xl relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">
+      <div className="container mx-auto max-w-7xl relative z-10 px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold mb-4 sm:mb-6 px-4">
             <span className="bg-gradient-primary bg-clip-text text-transparent">Featured Work</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto px-4">
             A showcase of recent projects across different video formats and styles
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {portfolioItems.map((item, index) => (
             <Sheet key={index}>
               <SheetTrigger asChild>

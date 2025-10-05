@@ -28,15 +28,15 @@ const Hero = () => {
       <div className="absolute bottom-1/4 left-1/3 w-36 h-36 bg-accent/5 rounded-full blur-2xl animate-float" style={{animationDelay: '3s'}}></div>
       
       {/* Content */}
-      <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
-        <div className="space-y-8 lg:space-y-12">
+      <div className="relative z-10 text-center px-6 sm:px-8 lg:px-12 max-w-7xl mx-auto">
+        <div className="space-y-6 sm:space-y-8 lg:space-y-12">
           <div className="animate-scale-in">
-            <div className="inline-block mb-6 animate-fade-in">
-              <span className="text-sm font-medium text-primary bg-primary/10 px-6 py-3 rounded-full border border-primary/20 backdrop-blur-sm shadow-lg shadow-primary/5">
+            <div className="inline-block mb-4 sm:mb-6 animate-fade-in">
+              <span className="text-xs sm:text-sm font-medium text-primary bg-primary/10 px-4 sm:px-6 py-2 sm:py-3 rounded-full border border-primary/20 backdrop-blur-sm shadow-lg shadow-primary/5">
                 ✨ Professional Video Editing
               </span>
             </div>
-            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-tight tracking-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-tight tracking-tight px-4">
               <span className="text-gradient animate-slide-in-left">
                 Crafting Visual
               </span>
@@ -45,15 +45,15 @@ const Hero = () => {
             </h1>
           </div>
           
-          <p className="text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed font-light animate-fade-in-delay backdrop-blur-sm">
+          <p className="text-base sm:text-lg lg:text-xl xl:text-2xl text-muted-foreground max-w-3xl lg:max-w-4xl mx-auto leading-relaxed font-light animate-fade-in-delay backdrop-blur-sm px-4">
             Transform your vision into compelling stories with professional video editing 
             that captivates audiences and delivers measurable results.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 lg:gap-6 justify-center pt-4 animate-fade-in-delay" style={{animationDelay: '0.5s'}}>
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 lg:gap-6 justify-center pt-2 sm:pt-4 animate-fade-in-delay px-4" style={{animationDelay: '0.5s'}}>
             <Button 
               size="lg" 
-              className="bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 hover:shadow-2xl hover:shadow-primary/30 transition-all duration-300 text-lg px-10 py-6 font-medium rounded-lg hover:scale-105 backdrop-blur-sm"
+              className="bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 hover:shadow-2xl hover:shadow-primary/30 transition-all duration-300 text-base sm:text-lg px-8 sm:px-10 py-5 sm:py-6 font-medium rounded-lg hover:scale-105 backdrop-blur-sm w-full sm:w-auto"
               onClick={() => document.getElementById('work')?.scrollIntoView({ behavior: 'smooth' })}
             >
               🎬 View Portfolio
@@ -61,7 +61,7 @@ const Hero = () => {
             <Button 
               size="lg" 
               variant="outline" 
-              className="border-primary/30 text-foreground hover:bg-primary/10 hover:border-primary transition-all duration-300 text-lg px-10 py-6 font-medium rounded-lg backdrop-blur-md hover:scale-105 shadow-lg"
+              className="border-primary/30 text-foreground hover:bg-primary/10 hover:border-primary transition-all duration-300 text-base sm:text-lg px-8 sm:px-10 py-5 sm:py-6 font-medium rounded-lg backdrop-blur-md hover:scale-105 shadow-lg w-full sm:w-auto"
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
               🚀 Start Project

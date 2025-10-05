@@ -1,8 +1,8 @@
 const Footer = () => {
   return (
-    <footer className="py-12 lg:py-16 px-4 sm:px-6 lg:px-8 border-t border-border/50 bg-gradient-to-t from-secondary/10 to-background">
+    <footer className="py-12 lg:py-16 px-6 sm:px-8 lg:px-12 border-t border-border/50 bg-gradient-to-t from-secondary/10 to-background">
       <div className="container mx-auto max-w-7xl">
-        <div className="flex flex-col md:flex-row justify-between items-center gap-6 md:gap-0">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-8 md:gap-4">
           <div className="text-center md:text-left">
             <div className="font-display font-bold text-xl lg:text-2xl bg-gradient-primary bg-clip-text text-transparent">
               Apex Edits
