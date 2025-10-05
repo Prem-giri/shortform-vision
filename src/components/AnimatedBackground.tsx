@@ -10,9 +10,6 @@ function Camera({ position }: { position: [number, number, number] }) {
     if (groupRef.current) {
       groupRef.current.rotation.y = Math.sin(state.clock.elapsedTime * 0.5) * 0.3;
       groupRef.current.rotation.x = Math.cos(state.clock.elapsedTime * 0.3) * 0.2;
-      groupRef.current.position.y = position[1] + Math.sin(state.clock.elapsedTime * 0.6) * 0.4;
-      const scale = 1 + Math.sin(state.clock.elapsedTime * 0.8) * 0.15;
-      groupRef.current.scale.set(scale, scale, scale);
     }
   });
 
@@ -46,9 +43,6 @@ function Clapperboard({ position }: { position: [number, number, number] }) {
     if (meshRef.current) {
       meshRef.current.rotation.z = Math.sin(state.clock.elapsedTime * 0.8) * 0.2;
       meshRef.current.rotation.y += 0.008;
-      meshRef.current.position.y = position[1] + Math.cos(state.clock.elapsedTime * 0.7) * 0.35;
-      const scale = 1 + Math.cos(state.clock.elapsedTime * 1.1) * 0.12;
-      meshRef.current.scale.set(scale, scale, scale);
     }
   });
 
@@ -80,12 +74,9 @@ function Clapperboard({ position }: { position: [number, number, number] }) {
 function FilmReel({ position }: { position: [number, number, number] }) {
   const meshRef = useRef<THREE.Group>(null);
   
-  useFrame((state) => {
+  useFrame(() => {
     if (meshRef.current) {
       meshRef.current.rotation.y += 0.015;
-      meshRef.current.position.y = position[1] + Math.sin(state.clock.elapsedTime * 0.8) * 0.5;
-      const scale = 1 + Math.sin(state.clock.elapsedTime * 0.9) * 0.14;
-      meshRef.current.scale.set(scale, scale, scale);
     }
   });
 
@@ -120,9 +111,6 @@ function Timeline({ position }: { position: [number, number, number] }) {
   useFrame((state) => {
     if (meshRef.current) {
       meshRef.current.position.x = position[0] + Math.sin(state.clock.elapsedTime * 0.5) * 0.3;
-      meshRef.current.position.y = position[1] + Math.cos(state.clock.elapsedTime * 0.6) * 0.25;
-      const scale = 1 + Math.sin(state.clock.elapsedTime * 0.7) * 0.1;
-      meshRef.current.scale.set(scale, scale, scale);
     }
   });
 
@@ -164,8 +152,6 @@ function PlayButton({ position }: { position: [number, number, number] }) {
     if (meshRef.current) {
       meshRef.current.rotation.z += 0.005;
       meshRef.current.position.y = position[1] + Math.sin(state.clock.elapsedTime) * 0.2;
-      const scale = 1 + Math.sin(state.clock.elapsedTime * 1.5) * 0.18;
-      meshRef.current.scale.set(scale, scale, scale);
     }
   });
 

@@ -4,8 +4,6 @@ import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/co
 import { Play } from "lucide-react";
 import { useState } from "react";
 import Section3DBackground from "./Section3DBackground";
-import { motion } from "framer-motion";
-import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 // Import portfolio images
 import instagramReelImage from "@/assets/portfolio-instagram-reel.jpg";
@@ -99,123 +97,84 @@ const Portfolio = () => {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          {portfolioItems.map((item, index) => {
-            const PortfolioCard = () => {
-              const { ref, isVisible } = useScrollAnimation(0.1);
-              
-              return (
-                <motion.div
-                  ref={ref}
-                  initial={{ opacity: 0, y: 50, scale: 0.9 }}
-                  animate={isVisible ? { opacity: 1, y: 0, scale: 1 } : { opacity: 0, y: 50, scale: 0.9 }}
-                  transition={{ 
-                    duration: 0.6, 
-                    delay: index * 0.1,
-                    ease: [0.25, 0.46, 0.45, 0.94]
-                  }}
-                >
-                  <Sheet key={index}>
-                    <SheetTrigger asChild>
-                      <Card className="group cursor-pointer bg-card border-border hover:shadow-card transition-all duration-300 overflow-hidden hover:border-primary/50" onClick={() => handleVideoSelect(item)}>
-                        <motion.div 
-                          className="aspect-video bg-gradient-secondary relative overflow-hidden"
-                          whileHover={{ scale: 1.05 }}
-                          transition={{ duration: 0.3 }}
+          {portfolioItems.map((item, index) => (
+            <Sheet key={index}>
+              <SheetTrigger asChild>
+                <Card className="group cursor-pointer bg-card border-border hover:shadow-card transition-all duration-300 overflow-hidden hover:border-primary/50" onClick={() => handleVideoSelect(item)}>
+                  <div className="aspect-video bg-gradient-secondary group-hover:scale-105 transition-transform duration-300 relative overflow-hidden">
+                    <img 
+                      src={item.thumbnail} 
+                      alt={item.title}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                      <Play className="w-12 h-12 text-white" />
+                    </div>
+                  </div>
+                  <div className="p-6">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-sm text-primary font-medium">{item.category}</span>
+                      <span className="text-xs text-muted-foreground">{item.stats}</span>
+                    </div>
+                    <h3 className="text-xl font-display font-semibold mb-2 group-hover:text-primary transition-colors">
+                      {item.title}
+                    </h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed">
+                      {item.description}
+                    </p>
+                  </div>
+                </Card>
+              </SheetTrigger>
+              <SheetContent side="right" className="w-full sm:max-w-4xl">
+                <SheetHeader>
+                  <SheetTitle className="text-2xl font-display">{selectedItem?.title}</SheetTitle>
+                </SheetHeader>
+                <div className="mt-6 space-y-6">
+                  {selectedItem && (
+                    <>
+                      <div className="aspect-video w-full bg-black rounded-lg overflow-hidden">
+                        <video 
+                          key={selectedVideo}
+                          controls 
+                          className="w-full h-full"
+                          src={selectedVideo}
                         >
-                          <img 
-                            src={item.thumbnail} 
-                            alt={item.title}
-                            className="w-full h-full object-cover"
-                          />
-                          <motion.div 
-                            className="absolute inset-0 bg-black/20 flex items-center justify-center"
-                            initial={{ opacity: 0 }}
-                            whileHover={{ opacity: 1 }}
-                            transition={{ duration: 0.3 }}
-                          >
-                            <motion.div
-                              initial={{ scale: 0 }}
-                              whileHover={{ scale: 1, rotate: 360 }}
-                              transition={{ duration: 0.5 }}
-                            >
-                              <Play className="w-12 h-12 text-white" />
-                            </motion.div>
-                          </motion.div>
-                        </motion.div>
-                        <div className="p-6">
-                          <div className="flex items-center justify-between mb-2">
-                            <span className="text-sm text-primary font-medium">{item.category}</span>
-                            <span className="text-xs text-muted-foreground">{item.stats}</span>
-                          </div>
-                          <h3 className="text-xl font-display font-semibold mb-2 group-hover:text-primary transition-colors">
-                            {item.title}
-                          </h3>
-                          <p className="text-muted-foreground text-sm leading-relaxed">
-                            {item.description}
-                          </p>
-                        </div>
-                      </Card>
-                    </SheetTrigger>
-                    <SheetContent side="right" className="w-full sm:max-w-4xl">
-                      <SheetHeader>
-                        <SheetTitle className="text-2xl font-display">{selectedItem?.title}</SheetTitle>
-                      </SheetHeader>
-                      <div className="mt-6 space-y-6">
-                        {selectedItem && (
-                          <>
-                            <motion.div 
-                              className="aspect-video w-full bg-black rounded-lg overflow-hidden"
-                              initial={{ opacity: 0, scale: 0.95 }}
-                              animate={{ opacity: 1, scale: 1 }}
-                              transition={{ duration: 0.5 }}
-                            >
-                              <video 
-                                key={selectedVideo}
-                                controls 
-                                className="w-full h-full"
-                                src={selectedVideo}
-                              >
-                                Your browser does not support the video tag.
-                              </video>
-                            </motion.div>
-                            
-                            {selectedItem.videos.length > 1 && (
-                              <div className="space-y-4">
-                                <h3 className="text-lg font-semibold">Choose Video:</h3>
-                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                                  {selectedItem.videos.map((video: any, videoIndex: number) => (
-                                    <Button
-                                      key={videoIndex}
-                                      variant={selectedVideo === video.url ? "default" : "outline"}
-                                      onClick={() => setSelectedVideo(video.url)}
-                                      className="justify-start"
-                                    >
-                                      <Play className="w-4 h-4 mr-2" />
-                                      {video.title}
-                                    </Button>
-                                  ))}
-                                </div>
-                              </div>
-                            )}
-                            
-                            <div className="space-y-2">
-                              <p className="text-sm text-muted-foreground">{selectedItem.description}</p>
-                              <div className="flex items-center gap-4">
-                                <span className="text-sm text-primary font-medium">{selectedItem.category}</span>
-                                <span className="text-sm text-muted-foreground">{selectedItem.stats}</span>
-                              </div>
-                            </div>
-                          </>
-                        )}
+                          Your browser does not support the video tag.
+                        </video>
                       </div>
-                    </SheetContent>
-                  </Sheet>
-                </motion.div>
-              );
-            };
-            
-            return <PortfolioCard key={index} />;
-          })}
+                      
+                      {selectedItem.videos.length > 1 && (
+                        <div className="space-y-4">
+                          <h3 className="text-lg font-semibold">Choose Video:</h3>
+                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            {selectedItem.videos.map((video: any, videoIndex: number) => (
+                              <Button
+                                key={videoIndex}
+                                variant={selectedVideo === video.url ? "default" : "outline"}
+                                onClick={() => setSelectedVideo(video.url)}
+                                className="justify-start"
+                              >
+                                <Play className="w-4 h-4 mr-2" />
+                                {video.title}
+                              </Button>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+                      
+                      <div className="space-y-2">
+                        <p className="text-sm text-muted-foreground">{selectedItem.description}</p>
+                        <div className="flex items-center gap-4">
+                          <span className="text-sm text-primary font-medium">{selectedItem.category}</span>
+                          <span className="text-sm text-muted-foreground">{selectedItem.stats}</span>
+                        </div>
+                      </div>
+                    </>
+                  )}
+                </div>
+              </SheetContent>
+            </Sheet>
+          ))}
         </div>
 
         <div className="text-center mt-12">
