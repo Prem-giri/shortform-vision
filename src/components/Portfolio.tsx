@@ -17,7 +17,7 @@ const Portfolio = () => {
   const [selectedItem, setSelectedItem] = useState<any>(null);
   
   const portfolioItems = [{
-    category: "Short-Form",
+    category: "Instagram Reel",
     title: "Instagram Reel Campaign",
     description: "Viral marketing campaign that gained 2M+ views",
     thumbnail: instagramReelImage,
@@ -27,7 +27,7 @@ const Portfolio = () => {
       { title: "Behind the Scenes", url: "https://www.w3schools.com/html/movie.mp4" }
     ]
   }, {
-    category: "Documentary",
+    category: "Brand Story",
     title: "Corporate Story",
     description: "Brand documentary showcasing company culture",
     thumbnail: corporateStoryImage,
@@ -37,7 +37,7 @@ const Portfolio = () => {
       { title: "Trailer", url: "https://www.w3schools.com/html/movie.mp4" }
     ]
   }, {
-    category: "Presentation",
+    category: "Lead Generation",
     title: "Lead Generation Video",
     description: "High-converting video content for sales funnels",
     thumbnail: leadGenerationImage,
@@ -46,7 +46,7 @@ const Portfolio = () => {
       { title: "Sales Funnel Video", url: "https://www.w3schools.com/html/mov_bbb.mp4" }
     ]
   }, {
-    category: "Short-Form",
+    category: "Travel Content",
     title: "Travel Reel Series",
     description: "Cinematic travel content for tourism brand",
     thumbnail: travelReelImage,
@@ -66,7 +66,7 @@ const Portfolio = () => {
       { title: "Documentary Showcase", url: "https://www.w3schools.com/html/mov_bbb.mp4" }
     ]
   }, {
-    category: "Presentation",
+    category: "E-Learning",
     title: "Educational Series",
     description: "Multi-part educational content for online course",
     thumbnail: educationalSeriesImage,
